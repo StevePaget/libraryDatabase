@@ -8,10 +8,10 @@ from books import bookFrame
 class App(tk.Tk):
     def __init__(self):
         tk.Tk.__init__(self)
-        self.geometry("700x700+100+100")
+        self.geometry("900x700+100+100")
         self.title("Library Database Demo")
 
-        # This dictionary stores allthe frames in the database,which have been imported from separate files
+        # This dictionary stores all the frames in the database,which have been imported from separate files
         self.frames = {"login":loginFrame(self), "books":bookFrame(self)}
 
         self.db = sql.connect("library.db")
