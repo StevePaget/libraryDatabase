@@ -21,3 +21,8 @@ for line in f.readlines():
     c.execute("INSERT INTO books VALUES (?,?,?,?,?)", bits)
 db.commit()
 
+# This makes a table which can link books to a username
+# we have a combined Primary Key, so each link can only appear once
+c.execute("DROP TABLE IF EXISTS owned")
+c.execute("CREATE TABLE owned (username TEXT, id INT, PRIMARY KEY(username,id))")
+

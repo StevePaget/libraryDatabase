@@ -60,8 +60,8 @@ class loginFrame(tk.Frame):
         if True: #    len(results) == 1:
             # OK login
             # Then switch frames
-            self.parent.switchFrame("books")
             self.parent.loggedInUser = "bob54" # username
+            self.parent.switchFrame("books")
         else:
             # bad login
             self.errorLabel.configure(text="Wrong username or password")
